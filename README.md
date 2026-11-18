@@ -2,7 +2,7 @@
 
 **English** · [Polski](README.pl.md)
 
-**A Polish chat bot for Kick that turns viewers into players.** It puts games, points for watching, alerts, widgets and a streamer panel into one bot, and all of it is in Polish.
+**A Polish chat bot for Kick and Twitch that turns viewers into players.** It puts games, points for watching, alerts, widgets and a streamer panel into one bot, and all of it is in Polish.
 
 [Website](https://onyxbot.live) · [Discord](https://discord.gg/ss7j3EvKMQ) · Status: beta
 
@@ -13,16 +13,17 @@
 ## Contents
 
 1. [At a glance](#at-a-glance)
-2. [Games on stream](#games-on-stream)
-3. [Widgets](#widgets)
-4. [Alerts](#alerts)
-5. [Points and rewards](#points-and-rewards)
-6. [Streamer panel](#streamer-panel)
-7. [Moderation](#moderation)
-8. [Discord](#discord)
-9. [Commands](#commands)
-10. [Getting started](#getting-started)
-11. [FAQ](#faq)
+2. [Kick and Twitch](#kick-and-twitch)
+3. [Games on stream](#games-on-stream)
+4. [Widgets](#widgets)
+5. [Alerts](#alerts)
+6. [Points and rewards](#points-and-rewards)
+7. [Streamer panel](#streamer-panel)
+8. [Moderation](#moderation)
+9. [Discord](#discord)
+10. [Commands](#commands)
+11. [Getting started](#getting-started)
+12. [FAQ](#faq)
 
 ## At a glance
 
@@ -32,9 +33,26 @@
 
 - **Nothing to install.** The bot runs on a server. Games, alerts and widgets go into OBS as browser sources.
 - **Nothing for viewers to set up.** Viewers take part by typing in chat. They don't need an extra account or app.
-- **One panel for everything.** The streamer logs in with their Kick account and switches every feature on or off, or fine-tunes it.
+- **One panel for everything.** The streamer logs in with their Kick or Twitch account and switches every feature on or off, or fine-tunes it.
 - **Runs without the streamer.** Moderators can start games, bets and contests themselves.
 - **Fully Polish.** The bot, the panel and every widget are in Polish.
+
+## Kick and Twitch
+
+Since November 2026 OnyxBot also works on Twitch. It's the same bot with the same panel, games, widgets, alerts, points and moderation. Only the platform-specific parts are different.
+
+| | Kick | Twitch |
+|---|---|---|
+| Panel login | Kick account | Twitch account |
+| Alerts | follow, sub, gifted sub, raid, Kicks | follow, sub, resub, gifted sub, raid, Bits |
+| Viewer support in widgets | Kicks | Bits |
+| Emotes in games and widgets | Kick and 7TV | Twitch and 7TV |
+| Reward shop login | Kick | Twitch |
+
+- **Live chat in games and widgets.** Twitch messages and emotes show up on screen right away. Deleted messages and timeouts disappear from the chat widget too.
+- **Moderation through Twitch.** Automod deletes messages, times out and bans with Twitch's own tools. The bot needs moderator rights on the channel.
+- **Stats from Twitch.** Viewer count, follows, subs and stream history come straight from Twitch.
+- **Clips.** `!klip` creates a clip on Twitch.
 
 ## Games on stream
 
@@ -177,7 +195,7 @@ Points are the channel's own currency. They can't be bought or cashed out, and e
 
 **Spending**
 
-- **Reward shop:** `!sklep` posts a link to the channel's shop page. Viewers log in with Kick and spend points on rewards set by the streamer. Purchases that need approval wait in the panel, and rejected ones are refunded.
+- **Reward shop:** `!sklep` posts a link to the channel's shop page. Viewers log in with Kick or Twitch and spend points on rewards set by the streamer. Purchases that need approval wait in the panel, and rejected ones are refunded.
 - **Duels:** `!duel @nick <amount>`. The other viewer has 60 s to accept. `!matma` turns it into a mental maths duel.
 - **Blackjack:** `!bj <amount>` against a dealer in chat, with `!hit`, `!stand` and `!double`. A win pays ×2 and a blackjack ×2.5.
 - **Bets:** a moderator opens a bet with 2 to 5 options and viewers stake points (`!1 100`, `!2 all`). Winners get their stake back plus a share of the losing pool in proportion to what they put in.
@@ -185,7 +203,7 @@ Points are the channel's own currency. They can't be bought or cashed out, and e
 
 ## Streamer panel
 
-The streamer logs in with their Kick account and gets the whole channel in one place: how the stream went, who was most active, and the settings for every feature.
+The streamer logs in with their Kick or Twitch account and gets the whole channel in one place: how the stream went, who was most active, and the settings for every feature.
 
 ![Panel](docs/panel.jpg)
 
@@ -263,7 +281,7 @@ One Discord server can be connected to a channel.
 
 ## Getting started
 
-1. **Get in touch** on [Discord](https://discord.gg/ss7j3EvKMQ) with your Kick name, and the bot gets added to your channel.
+1. **Get in touch** on [Discord](https://discord.gg/ss7j3EvKMQ) with your Kick or Twitch name, and the bot gets added to your channel.
 2. **Add the links to OBS:** one browser source for games and separate ones for alerts and widgets. The links and exact sizes are in the panel.
 3. **Type `!wyscig`.** Chat joins with `!gram` and the bot does the rest.
 
@@ -273,7 +291,7 @@ One Discord server can be connected to a channel.
 No. The bot runs on a server, and games and alerts go into OBS as a browser source.
 
 **Do viewers need to log in anywhere?**
-No. It's enough that they write in chat on your channel. Only the reward shop asks them to log in with Kick.
+No. It's enough that they write in chat on your channel. Only the reward shop asks them to log in with Kick or Twitch.
 
 **Are points worth money?**
 No. They are your channel's currency. They can't be bought or cashed out.

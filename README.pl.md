@@ -2,7 +2,7 @@
 
 [English](README.md) · **Polski**
 
-**Polski bot do czatu na Kicku, który zamienia widzów w graczy.** Gry na ekranie, punkty za oglądanie, alerty, widżety i panel streamera w jednym bocie, w całości po polsku.
+**Polski bot do czatu na Kicku i Twitchu, który zamienia widzów w graczy.** Gry na ekranie, punkty za oglądanie, alerty, widżety i panel streamera w jednym bocie, w całości po polsku.
 
 [Strona](https://onyxbot.live) · [Discord](https://discord.gg/ss7j3EvKMQ) · Status: beta
 
@@ -13,16 +13,17 @@
 ## Spis treści
 
 1. [W skrócie](#w-skrócie)
-2. [Gry na ekranie](#gry-na-ekranie)
-3. [Widżety](#widżety)
-4. [Alerty](#alerty)
-5. [Punkty i nagrody](#punkty-i-nagrody)
-6. [Panel streamera](#panel-streamera)
-7. [Moderacja](#moderacja)
-8. [Discord](#discord)
-9. [Komendy](#komendy)
-10. [Start w trzech krokach](#start-w-trzech-krokach)
-11. [Pytania](#pytania)
+2. [Kick i Twitch](#kick-i-twitch)
+3. [Gry na ekranie](#gry-na-ekranie)
+4. [Widżety](#widżety)
+5. [Alerty](#alerty)
+6. [Punkty i nagrody](#punkty-i-nagrody)
+7. [Panel streamera](#panel-streamera)
+8. [Moderacja](#moderacja)
+9. [Discord](#discord)
+10. [Komendy](#komendy)
+11. [Start w trzech krokach](#start-w-trzech-krokach)
+12. [Pytania](#pytania)
 
 ## W skrócie
 
@@ -32,9 +33,26 @@
 
 - **Nic nie instalujesz.** Bot działa na serwerze, a gry, alerty i widżety dodajesz do OBS jako źródła przeglądarki.
 - **Widzowie niczego nie ustawiają.** Grają, pisząc na czacie, bez zakładania kont i instalowania aplikacji.
-- **Jeden panel do wszystkiego.** Logujesz się kontem z Kicka i każdą funkcję włączasz, wyłączasz albo dopasowujesz.
+- **Jeden panel do wszystkiego.** Logujesz się kontem z Kicka albo Twitcha i każdą funkcję włączasz, wyłączasz albo dopasowujesz.
 - **Działa też bez Ciebie.** Moderatorzy sami odpalają gry, zakłady i konkursy.
 - **W całości po polsku.** Bot, panel i wszystkie widżety.
+
+## Kick i Twitch
+
+Od listopada 2026 OnyxBot działa też na Twitchu. To ten sam bot z tym samym panelem, grami, widżetami, alertami, punktami i moderacją. Różnią się tylko rzeczy typowe dla platformy.
+
+| | Kick | Twitch |
+|---|---|---|
+| Logowanie do panelu | konto z Kicka | konto z Twitcha |
+| Alerty | follow, sub, sub w prezencie, raid, kicksy | follow, sub, resub, sub w prezencie, raid, bitsy |
+| Wsparcie widzów w widżetach | kicksy | bitsy |
+| Emotki w grach i widżetach | Kick i 7TV | Twitch i 7TV |
+| Logowanie do sklepu | Kick | Twitch |
+
+- **Czat na żywo w grach i widżetach.** Wiadomości i emotki z Twitcha od razu pojawiają się na ekranie. Usunięte wiadomości i timeouty znikają też z widżetu czatu.
+- **Moderacja przez Twitcha.** Automod usuwa wiadomości, daje timeouty i bany narzędziami Twitcha. Bot musi mieć moda na kanale.
+- **Statystyki z Twitcha.** Liczba widzów, followy, suby i historia streamów biorą się prosto z Twitcha.
+- **Klipy.** `!klip` robi klip na Twitchu.
 
 ## Gry na ekranie
 
@@ -177,7 +195,7 @@ Punkty to waluta Twojego kanału. Nie da się ich kupić ani wypłacić, a każd
 
 **Wydawanie**
 
-- **Sklep z nagrodami:** `!sklep` podaje link do sklepu kanału. Widzowie logują się Kickiem i wydają punkty na nagrody ustawione przez Ciebie. Zakupy do zatwierdzenia czekają w panelu, a odrzucone wracają na konto.
+- **Sklep z nagrodami:** `!sklep` podaje link do sklepu kanału. Widzowie logują się Kickiem albo Twitchem i wydają punkty na nagrody ustawione przez Ciebie. Zakupy do zatwierdzenia czekają w panelu, a odrzucone wracają na konto.
 - **Pojedynki:** `!duel @nick <ile>`, a drugi widz ma 60 s na akceptację. `!matma` to pojedynek w liczeniu w pamięci.
 - **Blackjack:** `!bj <ile>` z krupierem na czacie, do tego `!hit`, `!stand` i `!double`. Wygrana ×2, blackjack ×2,5.
 - **Zakłady:** moderator otwiera zakłady z 2–5 opcjami, a widzowie stawiają punkty (`!1 100`, `!2 all`). Wygrani dostają stawkę i część przegranej puli według wkładu.
@@ -185,7 +203,7 @@ Punkty to waluta Twojego kanału. Nie da się ich kupić ani wypłacić, a każd
 
 ## Panel streamera
 
-Logujesz się kontem z Kicka i masz cały kanał w jednym miejscu: jak poszedł stream, kto był najaktywniejszy i ustawienia każdej funkcji.
+Logujesz się kontem z Kicka albo Twitcha i masz cały kanał w jednym miejscu: jak poszedł stream, kto był najaktywniejszy i ustawienia każdej funkcji.
 
 ![Panel](docs/panel.jpg)
 
@@ -263,7 +281,7 @@ Do kanału podłączasz jeden serwer Discord.
 
 ## Start w trzech krokach
 
-1. **Napisz na [Discordzie](https://discord.gg/ss7j3EvKMQ)** i podaj nick z Kicka, a dodamy bota na Twój kanał.
+1. **Napisz na [Discordzie](https://discord.gg/ss7j3EvKMQ)** i podaj nick z Kicka albo Twitcha, a dodamy bota na Twój kanał.
 2. **Dodaj linki do OBS:** jedno źródło przeglądarki na gry, osobne na alerty i widżety. Linki i dokładne rozmiary skopiujesz z panelu.
 3. **Wpisz `!wyscig`.** Czat zapisuje się przez `!gram`, a bot zajmuje się resztą.
 
@@ -273,7 +291,7 @@ Do kanału podłączasz jeden serwer Discord.
 Nie. Bot działa na serwerze, a gry i alerty dodajesz do OBS jako źródło przeglądarki.
 
 **Czy widzowie muszą się gdzieś logować?**
-Nie. Wystarczy, że piszą na czacie Twojego kanału. Logowanie Kickiem jest potrzebne tylko w sklepie z nagrodami.
+Nie. Wystarczy, że piszą na czacie Twojego kanału. Logowanie Kickiem albo Twitchem jest potrzebne tylko w sklepie z nagrodami.
 
 **Czy punkty mają wartość pieniężną?**
 Nie. To waluta Twojego kanału. Nie da się ich kupić ani wypłacić.
